@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amanulla Shaik — Portfolio</title>
+  <meta name="description" content="Portfolio of Amanulla Shaik — Data/BI/DE projects, resume highlights, and contact form." />
+  <meta name="author" content="Amanulla Shaik" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Amanulla Shaik — Portfolio" />
+  <meta property="og:description" content="Data + Analytics + Engineering. Explore projects, skills, and get in touch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://your-domain.example" />
+
+  <!-- Tailwind CSS CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"] },
+          colors: {
+            brand: {
+              50: '#eef9ff', 100: '#d7f0ff', 200: '#b0e0ff', 300: '#7ecaff', 400: '#49aefc',
+              500: '#1f8ffa', 600: '#0f73d6', 700: '#0b5bb0', 800: '#0b4b8f', 900: '#0c3f77'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Gradient text helper */
+    .text-gradient { background: linear-gradient(90deg, #1f8ffa, #0b5bb0 60%, #111827); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans">
+  <!-- Sticky Nav -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-white/5">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="text-lg font-extrabold tracking-tight"><span class="text-gradient">AS</span></a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a class="hover:text-white/90" href="#projects">Projects</a>
+        <a class="hover:text-white/90" href="#skills">Skills</a>
+        <a class="hover:text-white/90" href="#experience">Experience</a>
+        <a class="hover:text-white/90" href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="md:inline-flex hidden items-center gap-2 rounded-2xl bg-brand-500 hover:bg-brand-400 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 transition">
+        Contact Me
+      </a>
+      <!-- Mobile menu trigger (no JS, simple anchor links suffice) -->
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[80rem] h-[80rem] bg-brand-500/10 blur-3xl rounded-full"></div>
+    <div class="mx-auto max-w-6xl px-4 pt-16 pb-10">
+      <div class="grid md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-3">
+          <p class="text-xs uppercase tracking-widest text-brand-300">Portfolio</p>
+          <h1 class="mt-2 text-4xl/tight md:text-6xl font-extrabold">
+            Hi, I'm <span class="text-gradient">Amanulla Shaik</span>.<br/>
+            I build data products that drive outcomes.
+          </h1>
+          <p class="mt-5 text-slate-300 max-w-2xl">
+            Data Engineer / Analyst specializing in Snowflake, Databricks, Azure/AWS, and Power BI. I design reliable pipelines, actionable dashboards, and ML-enabled features for healthcare, finance, and product teams.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-2xl bg-white text-slate-900 px-5 py-3 text-sm font-semibold hover:bg-white/90 transition">View Projects</a>
+            <a href="#contact" class="rounded-2xl bg-slate-800 px-5 py-3 text-sm font-semibold hover:bg-slate-700 transition">Let's Talk</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-400">
+            <span>Open to: Full-time · Contract · Remote/Hybrid</span>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <div class="relative">
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-brand-500/40 to-white/5 blur"></div>
+            <img alt="Portrait" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1080&auto=format&fit=crop" class="relative rounded-3xl w-full object-cover aspect-[4/5] ring-1 ring-white/10" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Bar -->
+  <section class="border-y border-white/5 bg-slate-900/30">
+    <div class="mx-auto max-w-6xl px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><p class="text-3xl font-extrabold">5+</p><p class="text-xs text-slate-400">Years Experience</p></div>
+      <div><p class="text-3xl font-extrabold">30+</p><p class="text-xs text-slate-400">Pipelines Delivered</p></div>
+      <div><p class="text-3xl font-extrabold">15+</p><p class="text-xs text-slate-400">Dashboards in Prod</p></div>
+      <div><p class="text-3xl font-extrabold">3</p><p class="text-xs text-slate-400">Industries</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold">Projects</h2>
+        <p class="text-slate-400 mt-1">Selected work demonstrating end‑to‑end data impact.</p>
+      </div>
+      <a href="#contact" class="text-sm text-brand-300 hover:text-brand-200">Want something similar? →</a>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <!-- Project Card 1 -->
+      <article class="group relative overflow-hidden rounded-3xl border border-white/5 bg-slate-900/40">
+        <img src="https://images.unsplash.com/photo-1534759846116-579bbe7c3ae5?q=80&w=1600&auto=format&fit=crop" alt="Data Lakehouse" class="h-48 w-full object-cover opacity-90"/>
+        <div class="p-6">
+          <h3 class="text-lg font-bold">HIPAA‑Centric Claims Lakehouse</h3>
+          <p class="mt-2 text-slate-300 text-sm">Built ingestion → curated layers on Databricks & Delta Lake; automated PII handling; reduced claims analytics SLA from 24h to 2h.</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Databricks</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Delta</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Azure</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Unity Catalog</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Project Card 2 -->
+      <article class="group relative overflow-hidden rounded-3xl border border-white/5 bg-slate-900/40">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop" alt="Analytics Dashboards" class="h-48 w-full object-cover opacity-90"/>
+        <div class="p-6">
+          <h3 class="text-lg font-bold">Product Analytics Suite</h3>
+          <p class="mt-2 text-slate-300 text-sm">Modeled usage funnels and retention cohorts; shipped executive Power BI with dbt tests; +18% feature adoption in 90 days.</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Snowflake</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">dbt</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Power BI</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Fivetran</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Project Card 3 -->
+      <article class="group relative overflow-hidden rounded-3xl border border-white/5 bg-slate-900/40">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="RAG/LLM" class="h-48 w-full object-cover opacity-90"/>
+        <div class="p-6">
+          <h3 class="text-lg font-bold">RAG for Compliance Insights</h3>
+          <p class="mt-2 text-slate-300 text-sm">Indexed policy docs in a vector store; built LangChain service to answer auditors; cut time‑to‑evidence by 70%.</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">LangChain</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">OpenAI</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Pinecone</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">FastAPI</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Project Card 4 -->
+      <article class="group relative overflow-hidden rounded-3xl border border-white/5 bg-slate-900/40">
+        <img src="https://images.unsplash.com/photo-1551281044-8a5c1f8d8be6?q=80&w=1600&auto=format&fit=crop" alt="Monitoring" class="h-48 w-full object-cover opacity-90"/>
+        <div class="p-6">
+          <h3 class="text-lg font-bold">Data Reliability & Observability</h3>
+          <p class="mt-2 text-slate-300 text-sm">Implemented tests, SLAs, and alerting; built lineage views; mean‑time‑to‑detect data issues down 60%.</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Great Expectations</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Airflow</li>
+            <li class="rounded-full bg-slate-800 px-2.5 py-1">Grafana</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold">Skills</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+        <h3 class="font-bold">Data Engineering</h3>
+        <p class="mt-2 text-sm text-slate-300">Databricks, Spark, PySpark, Snowflake, Delta Lake, dbt, Airflow, Kafka, Fivetran, Terraform.</p>
+      </div>
+      <div class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+        <h3 class="font-bold">Analytics & BI</h3>
+        <p class="mt-2 text-sm text-slate-300">SQL, Python, Power BI, Tableau, Cohorts, A/B testing, KPI design, experimentation.</p>
+      </div>
+      <div class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+        <h3 class="font-bold">ML & AI</h3>
+        <p class="mt-2 text-sm text-slate-300">Feature engineering, model monitoring, LangChain, RAG, vector DBs, FastAPI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold">Experience</h2>
+    <ol class="mt-6 space-y-6">
+      <li class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="font-bold">Data Engineer — Elevance Health</h3>
+            <p class="text-sm text-slate-400">2023 — 2025 · Remote</p>
+          </div>
+          <span class="text-xs rounded-full bg-slate-800 px-3 py-1">Healthcare</span>
+        </div>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+          <li>Designed lakehouse with medallion architecture; automated PHI tagging with Unity Catalog.</li>
+          <li>Optimized Spark jobs (AQE, partition pruning) reducing costs ~35%.</li>
+        </ul>
+      </li>
+      <li class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="font-bold">Data Analyst — UConn Health</h3>
+            <p class="text-sm text-slate-400">2021 — 2023 · Hartford, CT</p>
+          </div>
+          <span class="text-xs rounded-full bg-slate-800 px-3 py-1">Healthcare</span>
+        </div>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+          <li>Built Power BI dashboards for clinical KPIs; improved data quality with custom DAX checks.</li>
+          <li>Automated SQL reports; decreased manual reporting by 70%.</li>
+        </ul>
+      </li>
+      <li class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="font-bold">Business Analyst — Cognizant</h3>
+            <p class="text-sm text-slate-400">2019 — 2021 · Des Moines, IA (Wellmark)</p>
+          </div>
+          <span class="text-xs rounded-full bg-slate-800 px-3 py-1">Insurance</span>
+        </div>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+          <li>Gathered requirements, translated to SQL specs; collaborated with engineering & QA for delivery.</li>
+          <li>Owned KPI definitions and release notes for analytics features.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid md:grid-cols-5 gap-8">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Contact</h2>
+        <p class="mt-3 text-slate-300">Have a role, project, or idea? Drop a message and I’ll reply soon.</p>
+        <ul class="mt-6 text-sm text-slate-400 space-y-2">
+          <li><strong class="text-slate-200">Email:</strong> <a class="hover:underline" href="mailto:amanshaik01work@gmail.com">amanshaik01work@gmail.com</a></li>
+          <li><strong class="text-slate-200">Phone:</strong> <a class="hover:underline" href="tel:+18607962309">+1 (860) 796‑2309</a></li>
+          <li><strong class="text-slate-200">Location:</strong> United States (ET)</li>
+          <li class="pt-2 flex gap-3">
+            <a aria-label="LinkedIn" href="#" class="hover:opacity-80">🔗 LinkedIn</a>
+            <a aria-label="GitHub" href="#" class="hover:opacity-80">🐙 GitHub</a>
+            <a aria-label="X" href="#" class="hover:opacity-80">𝕏</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <!-- Formspree (replace your_form_id) or Netlify (add data-netlify) -->
+        <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST" class="rounded-3xl border border-white/5 bg-slate-900/40 p-6">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm" for="name">Name</label>
+              <input id="name" name="name" required class="mt-1 w-full rounded-xl bg-slate-800 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="text-sm" for="email">Email</label>
+              <input id="email" name="email" type="email" required class="mt-1 w-full rounded-xl bg-slate-800 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="you@example.com" />
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-sm" for="subject">Subject</label>
+              <input id="subject" name="subject" required class="mt-1 w-full rounded-xl bg-slate-800 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="How can I help?" />
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-sm" for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required class="mt-1 w-full rounded-xl bg-slate-800 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="Tell me about your role, project, or question."></textarea>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-3">
+            <button id="submitBtn" class="inline-flex items-center gap-2 rounded-2xl bg-brand-500 hover:bg-brand-400 px-5 py-2.5 font-semibold shadow-lg shadow-brand-500/20 disabled:opacity-60 disabled:cursor-not-allowed" type="submit">
+              <span>Send Message</span>
+            </button>
+            <p id="formStatus" class="text-sm text-slate-400"></p>
+          </div>
+          <!-- Netlify variant: add data-netlify="true" name="contact" and remove action attribute -->
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-500 flex items-center justify-between">
+      <p>© <span id="year"></span> Amanulla Shaik. All rights reserved.</p>
+      <a href="#home" class="hover:text-slate-300">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Basic form UX + inline validation
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('formStatus');
+    const btn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+
+      // very light checks
+      const email = document.getElementById('email').value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        status.textContent = 'Please enter a valid email address.';
+        status.className = 'text-sm text-red-400';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Sending…';
+
+      try {
+        const formData = new FormData(form);
+        const resp = await fetch(form.action, {
+          method: form.method,
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (resp.ok) {
+          form.reset();
+          status.textContent = 'Thanks! Your message has been sent.';
+          status.className = 'text-sm text-green-400';
+        } else {
+          const data = await resp.json().catch(() => ({}));
+          status.textContent = data.error || 'Something went wrong. Please try again or email me directly.';
+          status.className = 'text-sm text-red-400';
+        }
+      } catch (err) {
+        status.textContent = 'Network error. Please try again or email me directly.';
+        status.className = 'text-sm text-red-400';
+      } finally {
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Send Message';
+      }
+    });
+  </script>
+
+  <!-- Optional: JSON-LD for richer previews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amanulla Shaik",
+    "jobTitle": "Data Engineer / Analyst",
+    "email": "mailto:amanshaik01work@gmail.com",
+    "telephone": "+1-860-796-2309",
+    "url": "https://your-domain.example",
+    "sameAs": [
+      "https://www.linkedin.com/in/your-handle",
+      "https://github.com/your-handle"
+    ]
+  }
+  </script>
+</body>
+</html>
